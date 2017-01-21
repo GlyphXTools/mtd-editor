@@ -1,0 +1,3 @@
+[submodule "libs/freeimage"]
+	path = libs/freeimage
+	url = https://github.com/derkreature/FreeImage.git

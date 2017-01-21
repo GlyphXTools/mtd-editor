@@ -1,0 +1,193 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resources\resource.en.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resources\\resource.en.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open\tCtrl+O",               ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &as",                    ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert File(s)",             ID_EDIT_INSERTFILE
+        MENUITEM "&Extract File(s)",            ID_EDIT_EXTRACTFILE, GRAYED
+        MENUITEM "&Rename File\tF2",            ID_EDIT_RENAMEFILE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete File(s)\tDelete",     ID_EDIT_DELETEFILE, GRAYED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About\tF1",                  ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS 
+BEGIN
+    VK_DELETE,      ID_EDIT_DELETEFILE,     VIRTKEY, NOINVERT
+    VK_F2,          ID_EDIT_RENAMEFILE,     VIRTKEY, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP_ABOUT,          VIRTKEY, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINWINDOW DIALOGEX 0, 0, 431, 257
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT | WS_EX_APPWINDOW
+CAPTION "MTD Editor"
+MENU IDR_MENU1
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_EDITLABELS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,0,263,257,WS_EX_CLIENTEDGE
+    GROUPBOX        "Properties",IDC_STATIC,267,0,72,51
+    LTEXT           "X:",IDC_STATIC,273,10,8,8
+    LTEXT           "Y:",IDC_STATIC,273,20,8,8
+    LTEXT           "Width:",IDC_STATIC,273,30,22,8
+    LTEXT           "Height:",IDC_STATIC,273,40,24,8
+    LTEXT           "",IDC_STATIC_X,305,10,24,8
+    LTEXT           "",IDC_STATIC_Y,305,20,24,8
+    LTEXT           "",IDC_STATIC_WIDTH,305,30,24,8
+    LTEXT           "",IDC_STATIC_HEIGHT,305,40,24,8
+    GROUPBOX        "Image",IDC_GROUPBOX1,266,53,234,204
+    CONTROL         "",IDC_RENDER1,"MTDEditorRenderer",NOT WS_VISIBLE | WS_TABSTOP,271,64,50,46
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_UI_INITIALIZATION "Unable to initialize UI"
+    IDS_WARNING_EXTRACT_OVERWRITE 
+                            "The following file already exists in the directory:\n\n%ls\n\nDo you wish to replace it?"
+    IDS_OVERWRITE_TITLE     "Overwrite file?"
+    IDS_ERROR_IMAGE_SAVE    "Unable to save image"
+    IDS_ERROR_FILE_CREATE   "Unable to create file"
+    IDS_ERROR_FILE_WRITE    "Unable to write to file"
+    IDS_ERROR_BITMAP_COPY   "Unable to copy bitmap"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_BITMAP_EXPAND "Unable to expand bitmap"
+    IDS_ERROR_FORMAT_UNSUPPORTED "Unsupported image format"
+    IDS_ERROR_IMAGE_LOAD    "Unable to load image"
+    IDS_ERROR_IMAGE_CONVERT "Unable to convert image"
+    IDS_ERROR_FILE_OPEN     "Unable to open file"
+    IDS_ERROR_FILE_READ     "Unable to read file"
+    IDS_ERROR_BITMAP_CREATE "Unable to create bitmap"
+    IDS_QUERY_SAVE_MODIFICATIONS 
+                            "The file has been modified. Do you want to save the modifications?"
+    IDS_WARNING             "Warning"
+    IDS_UNNAMED             "Unnamed"
+    IDS_ERROR_CORRUPT_ARCHIVE 
+                            "The archive has been opened as read-only because it appears corrupt.\n\nTo create a valid archive, extract all files and insert them into a new archive."
+    IDS_ERROR_FILE_COUNT    "Too many files selected"
+    IDS_TITLE_REPLACE       "Replace file?"
+    IDS_WARNING_INSERT_OVERWRITE 
+                            "The following file already exists in the index:\n\n%ls\n\nDo you wish to replace it?"
+    IDS_TITLE_EXTRACT_TARGET 
+                            "Please select the folder where you wish to extract the files to."
+    IDS_INFORMATION         "Information"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_INFO_EXTRACTED      "The selected files have been extracted"
+    IDS_INFO_NONE_EXTRACTED "No files have been extracted"
+    IDS_FILENAME            "Filename"
+    IDS_FILES_ALL           "All Files"
+    IDS_FILES_IMAGE         "All Image Files"
+    IDS_FILES_MTD           "MTD files"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
